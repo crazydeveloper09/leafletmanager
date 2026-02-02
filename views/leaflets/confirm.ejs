@@ -11,29 +11,30 @@
                     Czy na pewno chcesz usunąć ulotkę <%= leaflet.title %>
                 </h1>
                 <% if(error.length > 0){ %>
-                    <div class="alert alert-danger" role="alert">
-                        <%= error %>
-                    </div>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
                 <% } %>
                 <% if(success.length > 0){ %>
-                    <div class="alert alert-success" role="alert">
-                        <%= success %>
-                    </div>
+                <div class="alert alert-success" role="alert">
+                    <%= success %>
+                </div>
                 <% } %>
                 <form action="/leaflets/<%= leaflet._id %>?_method=DELETE" method="post">
-                   
+
                     <input required type="submit" value="Tak" class="btn button btn-danger btn-red">
-                   
+
                 </form>
                 <a href="/leaflets" class="btn button btn-dark btn-black">
                     Nie
                 </a>
             </div>
-           
+
         </div>
-        
+
     </div>
 </div>
 
 </body>
+
 </html>
